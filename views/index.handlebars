@@ -18,7 +18,7 @@
             <option value="SteaknChz">Steak and Cheese Sandwich</option>
           </select>
           <button class="btn btn-warning" id="addburger" type="submit">
-            <i class="fas fa-hamburger"></i>
+            Add!
           </button>
         </div>
       </form>
@@ -36,7 +36,7 @@
 
             <span><strong> {{this.id}} - {{this.burger_name}}</strong></span>
             <button type="button" class="eatburger btn btn-warning" id="eatbutton" data-id="{{this.id}}"
-            data-newDevoured="{{devour}}"><span class="fa fa-usd"></span></button>
+            data-newDevoured="{{devour}}">Add!</button>
             <hr>
             {{/unless}}
             {{/each}}
@@ -51,13 +51,13 @@
           <div class="card-body">
            <ul>
             {{#each burgers}}
-           {{#unless devoured}}
+           {{#if devoured}}
 
             <span><strong> {{this.id}} - {{this.burger_name}}</strong></span>
             <button type="button" class="deleteburger btn btn-warning" id="eatbutton" data-id="{{this.id}}"
-            data-newDevoured="{{devour}}"><span class="fa fa-usd"></span></button>
+            data-newDevoured="{{devour}}">Delete</button>
             <hr>
-            {{/unless}}
+            {{/if}}
             {{/each}}
             </ul>
           </div>
